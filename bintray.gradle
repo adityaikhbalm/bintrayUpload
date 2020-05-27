@@ -1,5 +1,7 @@
 apply plugin: 'com.jfrog.bintray'
 
+version = libraryVersion
+
 if (project.hasProperty("android")) { // Android libraries
     task sourcesJar(type: Jar) {
         classifier = 'sources'
@@ -46,7 +48,6 @@ bintray {
         publish = true
         publicDownloadNumbers = true
         version {
-            vcsTag = libraryVersion
             desc = libraryDescription
             released = new Date()
             gpg {
