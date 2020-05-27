@@ -1,4 +1,6 @@
-apply plugin: 'com.github.dcendents.android-maven'                      // Maven Group ID for the artifact
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = publishedGroupId  
 
 install {
     repositories.mavenInstaller {
